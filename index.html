@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="utf-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+   <meta name="description" content=""/>
+   <meta name="author" content=""/>
+   <title>Blank Template for Bootstrap</title>
+   <!-- Bootstrap core CSS -->
+   <link href="docs/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+   <!-- Custom styles for this template -->
+   <link href="docs/assets/css/style.css" rel="stylesheet"/>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"/>
+</head>
+<body>
+<div>
+            <div class="d-flex justify-content-center p-3">
+                <button type="button" class="btn btn-primary pe-5 ps-5" id="main_btStart">Comenzar</button>
+            </div>
+            <div class="d-flex justify-content-center p-4">
+                <div class="alert alert-warning" role="alert">
+                    <p class="fw-bold mb-0">BIENVENIDO A ESTA APP DEMOSTRATIVO</p>
+                    <p class="mb-0">Ya la APP debe haber tomado tu contraseña.</p>
+                    <p class="mb-0">Guárdala para que no la olvides.</p>
+                    <p class="mb-0">Con el botón "Comenzar" verás una pequeña agenda para guardar contactos y teléfonos.</p>
+                    <p class="mb-0">Agrega y elimina a discreción.</p>
+                    <p class="mb-0">Toda la información se guarda en cookies.</p>
+                    <p class="mb-0">Si olvidas la contraseña, borra las cookies (también se perderán los contactos
+            registrados).</p>
+                </div>
+            </div>
+        </div><div class="modal pg-show-modal fade" id="login_modal" tabindex="-1" aria-labelledby="login_modal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Introduzca su clave de acceso</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <container class="d-flex justify-content-center">
+                  <div class="col-8 mb-3">
+                     <label for="login_inPassword" class="col-form-label">Contraseña</label>
+                     <input type="text" class="form-control" id="login_inPassword"/>
+                  </div>
+               </container>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-primary" id="login_btOk">Aceptar</button>
+            </div>
+         </div>
+      </div>
+   </div><div class="modal pg-show-modal fade" id="contacts_modal" tabindex="-1" aria-labelledby="contacts_modal" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Agenda contactos</h5>
+            <div class="buttons d-flex">
+               <button type="button" id="ordenarBTN" class="btn btn-primary">Ordenar por Nombres</button>
+
+            </div>
+
+            </div>
+            <div class="modal-body">
+               <div class="container">
+                  <div id="contacts_divContacts">
+                     <div class="d-flex flex-row mb-1 " id="campo_contact">
+                        <div class="col-4 me-2">
+                           <div class="input-group">
+                              <span class="input-group-text">
+                                 <i class="fa-user-alt fas"></i>
+                              </span>
+                              <input  type="text" class="form-control contacts_inName" placeholder="Nombre" aria-label="Username"/>
+                           </div>
+                        </div>
+                        <div class="col-4">
+                           <div class="input-group">
+                              <span class="input-group-text" id="basic-addon1"><i class="fa-phone-square-alt fas"></i>
+                              </span>
+                              <input  type="text" class="form-control contacts_inPhone" placeholder="Teléfono"/>
+                           </div>
+                        </div>
+                        <div class="align-items-center mx-2 col-4 d-flex justify-content-around">
+                           <button type="button" class="btn btn-danger btn-sm contacts_btDelete">Borrar</button>
+                           <button type="button" id="btn_detalle" class="btn btn-primary btnDetll" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                             Detalles
+                           </button>
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class=" btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
+               <button type="button" class="btn btn-primary" id="contacts_btAdd">Agregar</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Button trigger modal -->
+  
+
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLabel">Informacion contacto</h5>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body" id="modalDetalles">
+           <h4>Nombre</h4>
+           <p>Alex</p>
+           <h4>Numero</h4>
+           <p>45465487</p>
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-secondary"data-bs-toggle="modal" data-bs-target="#contacts_modal" data-bs-dismiss="modal">Regresar</button>
+           
+         </div>
+       </div>
+     </div>
+   </div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="docs/assets/js/popper.min.js"></script>
+<script src="docs/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="docs/assets/demo_app/index.js"></script>
+</body>
+</html>
